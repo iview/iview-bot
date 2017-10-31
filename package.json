@@ -1,0 +1,69 @@
+{
+  "name": "iview-bot",
+  "description": "Github bot",
+  "version": "0.0.1",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "NODE_ENV=development node src/app",
+    "lint": "eslint src/**/* --quiet",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg"
+  },
+  "author": "xuexb <fe.xiaowu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuexb/github-bot/issues"
+  },
+  "homepage": "https://github.com/xuexb/github-bot#readme",
+  "dependencies": {
+    "cryptiles": "3.1.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "github": "^11.0.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "require-dir": "^0.3.2",
+    "string-template": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 7.8.0"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release",
+        "close"
+      ]
+    },
+    "github-bot": {
+      "labelToAuthor": {
+        "bug": "xuexb",
+        "enhancement": "xuexb",
+        "question": "xuexb"
+      }
+    }
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
