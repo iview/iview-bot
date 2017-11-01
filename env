@@ -5,3 +5,7 @@ GITHUB_TOKEN=token
 
 # Webhook secret token, see https://developer.github.com/webhooks/securing/
 GITHUB_SECRET_TOKEN=secret
+
+BAIDU_APPID=appid
+
+BAIDU_SECRET=secret

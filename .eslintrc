@@ -1,18 +1,23 @@
-// http://eslint.org/docs/user-guide/configuring
 {
   "root": true,
-  "env": {
-    "node": true
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
-  // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-  "extends": "standard",
-  // add your custom rules here
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": ["vue"],
   "rules": {
-    // allow paren-less arrow functions
-    "arrow-parens": 0,
-    // allow async-await
-    "generator-star-spacing": 0,
-    // allow debugger during development
-    "no-debugger": 2
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "vue/jsx-uses-vars": 2,
+    "no-console": ["error"]
   }
 }

@@ -90,6 +90,28 @@ module.exports = {
   },
 
   /**
+   * 修改 issue 标题
+   * **/
+
+  async editTitle (payload, title) {
+      const owner = payload.repository.owner.login
+      const repo = payload.repository.name
+      const number = payload.issue.number
+
+      try {
+          await github.issues.edit({
+              owner,
+              repo,
+              number,
+              title
+          })
+          return true
+      } catch (e) {
+          return false
+      }
+  },
+
+  /**
    * 评论 PR
    *
    * @param {Object} payload data
